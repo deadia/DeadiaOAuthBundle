@@ -72,7 +72,7 @@ class HypertableOAuth extends OAuth2 {
   public function checkClientCredentials($client_id, $client_secret = NULL) {
     try {
       $client = $this->db->select()->setTable('clients')
-		                           ->condition(\Deadia\Driver\Condition::ROW_EQUAL, $client_id)
+		                           ->condition(\Deadia\HypertableBundle\Driver\Condition::ROW_EQUAL, $client_id)
 		                           ->execute();
 	  
       if (!isset($client[$client_id]) || $client[$client_id]->clientSecret != $client_secret)
@@ -91,7 +91,7 @@ class HypertableOAuth extends OAuth2 {
     try {
     	$client = $this->db->select()->setTable('clients')
     								 ->setColumn('redirectUri')
-    							     ->condition(\Deadia\Driver\Condition::ROW_EQUAL, $client_id)
+    							     ->condition(\Deadia\HypertableBundle\Driver\Condition::ROW_EQUAL, $client_id)
     							     ->execute();
        if (!isset($client[$client_id]))
           return FALSE;
@@ -111,7 +111,7 @@ class HypertableOAuth extends OAuth2 {
     try {
     
       $token = $this->db->select()->setTable('tokens')
-    							   ->condition(\Deadia\Driver\Condition::ROW_EQUAL, $oauth_token)
+    							   ->condition(\Deadia\HypertableBundle\Driver\Condition::ROW_EQUAL, $oauth_token)
     							   ->execute();
       if (!isset($token) || !isset($token[$oauth_token]))	
       	return NULL;
@@ -154,7 +154,7 @@ class HypertableOAuth extends OAuth2 {
   public function getAuthCode($code_id) {
     try {
       	$code = $this->db->select()->setTable('authCodes')
-    							   ->condition(\Deadia\Driver\Condition::ROW_REGEXP, $code_id)
+    							   ->condition(\Deadia\HypertableBundle\Driver\Condition::ROW_REGEXP, $code_id)
     							   ->execute();
     	if (!isset($code) && isset($code[$code_id]))	
       		return NULL;
