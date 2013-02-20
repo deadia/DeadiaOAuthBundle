@@ -1,6 +1,6 @@
 <?php
 
-namespace Deadia\OAuth2;
+namespace Deadia\OAuthBundle\Server;
 
 /**
  * The default duration in seconds of the access token lifetime.
