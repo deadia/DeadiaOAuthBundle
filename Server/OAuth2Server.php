@@ -1,6 +1,6 @@
 <?php
 
-namespace Deadia\OAuth2;
+namespace Deadia\OAuthBundle\Server;
 
 class OAuth2Server
 {
