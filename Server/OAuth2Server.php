@@ -12,7 +12,7 @@ class OAuth2Server
 	
 	public function __construct()
 	{
-		$this->oauth = new HTOAuth2;
+		$this->oauth = new HypertableOAuth;
 		
 	}
 	
