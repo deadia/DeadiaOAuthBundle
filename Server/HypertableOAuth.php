@@ -1,12 +1,12 @@
 <?php
 
-namespace Deadia\OAuth2;
+namespace Deadia\OAuthBundle\Server;
 
 
 /**
  * OAuth2 Library PDO DB Implementation.
  */
-class HypertableOAuth2 extends OAuth2 {
+class HypertableOAuth extends OAuth2 {
 
   private $db;
 
