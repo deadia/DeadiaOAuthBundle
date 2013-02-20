@@ -1,0 +1,36 @@
+{
+    "name": "deadia/oauth-bundle",
+    "type": "symfony-bundle",
+    "description": "",
+    "keywords": ["oauth"],
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Marc PEPIN",
+            "email": "m.pepin@deadia.fr"
+        }
+    ],
+
+    "require": {
+    },
+
+    "require-dev": {
+    },
+    
+    "conflict": {
+    },
+
+    "suggest": {
+    },
+
+    "autoload": {
+        "psr-0": { "Deadia\\OAuthBundle": "" }
+    },
+
+    "target-dir": "Deadia/OAuthBundle",
+
+    "extra": {
+        "branch-alias": {
+        }
+    }
+}
